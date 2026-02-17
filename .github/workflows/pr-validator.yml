@@ -21,9 +21,9 @@ on:
   pull_request_target:
     types: [opened, edited, reopened]
 
-# These permissions are declared at workflow level so they apply to the
-# GITHUB_TOKEN used by every step. contents: read is enough here since
-# the validator only reads the repo — it never commits anything.
+# permissions block below is kept for documentation only.
+# With PAT_TOKEN the effective permissions come from the PAT itself,
+# not from this block. The PAT must have Issues=write + Pull requests=write.
 permissions:
   pull-requests: write
   issues: write
@@ -36,13 +36,12 @@ jobs:
       - name: Validate PR Description
         uses: actions/github-script@v7
         with:
-          # GITHUB_TOKEN is automatically created per-run by GitHub.
-          # It inherits the permissions block above.
-          # If you still see "Resource not accessible by integration" after
-          # merging this file to the default branch and fixing org settings,
-          # create a PAT with repo scope and store it as PAT_TOKEN, then
-          # replace the line below with: ${{ secrets.PAT_TOKEN }}
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          # Using PAT_TOKEN instead of GITHUB_TOKEN because the gdg-charusat
+          # org-level Actions settings strip write permissions from GITHUB_TOKEN
+          # on fork PRs even when pull_request_target is used.
+          # PAT_TOKEN is a Fine-grained PAT stored as a repo secret with
+          # Issues=write and Pull requests=write on Zaplink_frontend only.
+          github-token: ${{ secrets.PAT_TOKEN }}
           script: |
             const pr       = context.payload.pull_request;
             const body     = pr.body || '';
