@@ -38,8 +38,6 @@ Thank you for your interest in contributing to **Zaplink** as part of the **GDG 
 
 ## 🚀 Reporting Bugs or Proposing Improvements
 
-Participants are allowed to create new issues for bugs, enhancements, or improvements, provided they follow proper documentation standards.
-
 If you identify:
 
 - A functional bug  
@@ -54,18 +52,11 @@ You must **create a new issue and wait for it to be approved**.
 
 ### 📌 Important Guidelines
 
-- ✅ Open a new issue describing the problem clearly, and approve it before submitting a Pull Request.
+- ✅ Open a new issue describing the problem clearly and wait for maintainer acknowledgment before submitting a Pull Request.
 - ✅ Submit a Pull Request with a clear and structured description.  
 - ✅ Include your **Team Number** in the PR description.  
 - ✅ Clearly explain the problem and the rationale behind your proposed change.  
-- ✅ Attach screenshots if the change affects UI.  
-
-These submissions will be treated as **General Improvement Pull Requests** and will undergo **strict review** to ensure:
-
-- Relevance to project scope  
-- Code quality and maintainability  
-- No unintended side effects  
-- Compliance with project standards  
+- ✅ Attach screenshots if the change affects UI. 
 
 Maintainers reserve the right to close any PR that is:
 
@@ -262,8 +253,6 @@ git push origin feature/your-feature-name
    - **Screenshots**: Add before/after screenshots if UI changes are involved
 4. Click **"Create pull request"**
 
-> 💡 **For General Improvement PRs** (bugs or enhancements not linked to any issue): You must still include your **Team Number** and a clear explanation of what you changed and why. These PRs are reviewed strictly.
-
 ## 📝 Issue Guidelines
 
 ### Finding Issues
@@ -310,8 +299,6 @@ When creating a new issue:
    - Screenshots (if UI-related)
 3. Wait for maintainer review before starting work
 
-⚠️ Do not start working on a self-created issue unless it is assigned to you.
-
 ## 🔄 Pull Request Process
 
 ### PR Requirements — Non-Negotiable
@@ -319,7 +306,7 @@ When creating a new issue:
 > PRs that don't meet ALL of the following will be **closed without review**:
 
 - [ ] **Team number stated** in the PR description (e.g., `Team XX`)
-- [ ] **Linked to your assigned issue** via `Closes #issue-number` (unless it's a general improvement PR)
+- [ ] **Linked to your assigned issue** via `Closes #issue-number`
 - [ ] **You are the assigned contributor** for that issue
 - [ ] PR is raised **after** assignment, not before
 
